@@ -4,6 +4,15 @@ char_set="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@&"
 length=$1
 prev_char=""
 
+# Check if the length of the password is specified
+if [ -z "$length" ]; then
+    echo "Usage: genpw.sh <length>"
+    exit 1
+fi
+
+echo "ヽ(ˋ▽ˊ)ノ generating..."
+sleep 1
+
 # Function to generate a random password
 function genpw {
     for (( i=0; i < $length; i++ )); do
@@ -30,4 +39,7 @@ function genpw {
 }
 
 # Invoking Functions
-genpw $length
+password=$(genpw $length)
+
+# Print the password
+echo "✨ $password"
