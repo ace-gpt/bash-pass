@@ -2,7 +2,6 @@
 
 charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789~!?@#$%^&*<>"
 length=$1
-rand=$RANDOM
 
 # Function to generate a random password
 function genpw {
